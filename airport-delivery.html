@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Car Delivery Lebanon | AL-AnsariPremium</title>
+    <meta name="description" content="Skip the hassle! Get your rental car delivered directly to Beirut Airport. Premium cars, instant delivery, competitive prices. Book now!">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: #000;
+        }
+
+        /* Hero Section with 3D Effect */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff10" points="0,0 1000,300 1000,1000 0,700"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(1deg); }
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 10;
+            position: relative;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero-badge {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            background: linear-gradient(45deg, #fff, #87CEEB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255,255,255,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-primary {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        .cta-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .feature-text {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid #25D366;
+            transform: scale(1.05);
+        }
+
+        .pricing-badge {
+            background: #25D366;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .car-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #87CEEB;
+        }
+
+        .price-period {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .features-list li:before {
+            content: '✓';
+            color: #25D366;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .pricing .section-title {
+            color: white;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .pricing .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .contact-item h3 {
+            color: #87CEEB;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-primary, .cta-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .features-grid, .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Scroll Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">✈️ Airport Delivery Service</div>
+            <h1>Skip the Queue, Get Your Car Delivered!</h1>
+            <p>Landing at Beirut Airport? Your premium rental car will be waiting for you. No lines, no hassle, just hop in and drive.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/76870313?text=Hi%20AL-AnsariPremium,%20I%20need%20airport%20delivery%20for%20my%20car%20rental.%20Can%20you%20help?" class="cta-primary">
+                    📱 Book Airport Delivery
+                </a>
+                <a href="#pricing" class="cta-secondary">View Prices</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Airport Delivery?</h2>
+            <p class="section-subtitle">Save time and start your Lebanese adventure immediately</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Instant Pickup</h3>
+                    <p class="feature-text">Your car is ready when you land. No waiting in rental counters or shuttle buses.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3 class="feature-title">Premium Fleet</h3>
+                    <p class="feature-text">Choose from budget-friendly to luxury vehicles. All cars are sanitized and ready to go.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3 class="feature-title">Meet & Greet</h3>
+                    <p class="feature-text">Our representative will meet you at arrivals with your car keys and documents.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">No Hidden Fees</h3>
+                    <p class="feature-text">Airport delivery is included in your rental price. What you see is what you pay.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌟</div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p class="feature-text">WhatsApp support throughout your rental period. We're here when you need us.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Flexible Returns</h3>
+                    <p class="feature-text">Return at the airport or anywhere in Beirut/South Lebanon. Your choice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Airport Delivery Pricing</h2>
+            <p class="section-subtitle">All prices include airport delivery and meet & greet service</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="car-name">Budget Options</h3>
+                    <div class="price">$50-60</div>
+                    <div class="price-period">per day</div>
+                    <ul class="features-list">
+                        <li>Grand Cherokee SUV</li>
+                        <li>Airport delivery included</li>
+                        <li>Full insurance coverage</li>
+                        <li>24/7 WhatsApp support</li>
+                        <li>Flexible return locations</li>
+                    </ul>
+                    <a href="https://wa.me/76870313?text=Hi%20AL-AnsariPremium,%20I%20want%20to%20book%20a%20budget%20car%20with%20airport%20delivery." class="cta-primary">Book Now</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3 class="car-name">Premium Selection</h3>
+                    <div class="price">$150</div>
+                    <div class="price-period">per day</div>
+                    <ul class="features-list">
+                        <li>Range Rover or BMW M5</li>
+                        <li>VIP airport delivery</li>
+                        <li>Premium insurance</li>
+                        <li>Priority support</li>
+                        <li>Complimentary car wash</li>
+                    </ul>
+                    <a href="https://wa.me/76870313?text=Hi%20AL-AnsariPremium,%20I%20want%20to%20book%20a%20premium%20car%20with%20airport%20delivery." class="cta-primary">Book Now</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3 class="car-name">Luxury Experience</h3>
+                    <div class="price">$200-220</div>
+                    <div class="price-period">per day</div>
+                    <ul class="features-list">
+                        <li>Aston Martin or Bentley</li>
+                        <li>White-glove service</li>
+                        <li>Concierge support</li>
+                        <li>Personal delivery rep</li>
+                        <li>Exclusive perks</li>
+                    </ul>
+                    <a href="https://wa.me/76870313?text=Hi%20AL-AnsariPremium,%20I%20want%20to%20book%20a%20luxury%20car%20with%20airport%20delivery." class="cta-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Ready to Skip the Airport Hassle?</h2>
+                <p class="section-subtitle">Contact us now to arrange your airport delivery</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📱 WhatsApp</h3>
+                        <p>76870313</p>
+                        <p>Instant booking & support</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>📍 Service Areas</h3>
+                        <p>Beirut Airport</p>
+                        <p>Beirut City & South Lebanon</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>⏰ Availability</h3>
+                        <p>24/7 Airport Delivery</p>
+                        <p>All flight times supported</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <a href="https://wa.me/76870313?text=Hi%20AL-AnsariPremium,%20I%20need%20airport%20delivery%20for%20my%20car%20rental.%20Here%20are%20my%20flight%20details:" class="cta-primary">
+                        🚗 Book Airport Delivery Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/76870313?text=Hi%20AL-AnsariPremium,%20I%20need%20airport%20delivery%20service!" class="whatsapp-float">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.087"/>
+        </svg>
+    </a>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.feature-card, .pricing-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('.pricing-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                if (this.classList.contains('featured')) {
+                    this.style.transform = 'translateY(0) scale(1.05)';
+                } else {
+                    this.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
